@@ -1,0 +1,28 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+<div class="background-image">
+<div class="text-center">
+    <h1 class="display-4">EventEase</h1>
+     <h5 class="text-display">The platform to find the best venues, events, and booking options tailored just for you.</h5>
+</div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <h2>Find Venues</h2>
+                <p>Discover the perfect venue for your next event. Whether it's a conference, wedding, or party, we have you covered.</p>
+                <a class="btn btn-primary" asp-area="" asp-controller="Venues" asp-action="Index">Explore Venues</a>
+            </div>
+            <div class="col-md-4">
+                <h2>Discover Events</h2>
+                <p>Stay updated with the latest events happening around you. From concerts to workshops, never miss out!</p>
+                <a class="btn btn-primary" asp-area="" asp-controller="Events" asp-action="Index">View Events</a>
+            </div>
+            <div class="col-md-4">
+                <h2>Book Now</h2>
+                <p>Secure your spot at your favorite events and venues. Easy booking process at your fingertips.</p>
+                <a class="btn btn-primary" asp-area="" asp-controller="Bookings" asp-action="Index">Make a Booking</a>
+            </div>
+        </div>
+    </div>
+ </div>

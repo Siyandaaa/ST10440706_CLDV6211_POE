@@ -1,0 +1,132 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+    background-color: lightgray;
+}
+
+.form-floating > .form-control-plaintext::placeholder, .form-floating > .form-control::placeholder {
+  color: var(--bs-secondary-color);
+  text-align: end;
+}
+
+.form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
+  text-align: start;
+}
+
+.hover-combined {
+    display: inline-block; 
+    padding: 10px 20px;
+    background-color: lightgray; 
+    color: black;
+    text-decoration: none; 
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s; 
+}
+
+    .hover-combined:hover {
+        background-color: dimgray; 
+        transform: scale(1.07); 
+    }
+
+.text-center {
+    display: inline-block;
+    padding: 100px 400px; 
+   /* background-image: url('https://static.wixstatic.com/media/037687_d2bcfd5a4fbe453b855f7b673cbc3b9b~mv2.jpg/v1/fill/w_1000,h_667,al_c,q_85/037687_d2bcfd5a4fbe453b855f7b673cbc3b9b~mv2.jpg');*/
+    height: 300px; 
+    border-radius: 100px;
+   /* opacity: 50%;*/
+    color: white; 
+    position: relative; 
+}
+    .text-center::after {
+        content: "We welcome you";
+        opacity: 0;
+        transition: opacity 0.3s;
+    }
+
+    .text-center:hover::after {
+        opacity: 1; 
+    }
+
+    .text-center:hover {
+        transform: scale(1.02); 
+        transition: transform 0.3s; 
+    }
+
+.custom-navbar {
+    background-color: lightgray;
+    padding: 20px 40px;
+    border-radius: 10px;
+}
+
+.background-image {
+    background-image: url('https://hartleybotanica.com/wp-content/uploads/2021/08/gallery_paliulu_8-1024x682.jpg');
+    /* background-size: cover; */
+    /*background-position: center;*/
+    height: 90vh;
+    color: white;
+    position: relative;
+}
+
+.col-md-4:hover {
+    transform: scale(1.02); 
+    transition: transform 0.3s; 
+}
+
+.text-muted {
+    background-color: lightgray;
+    padding: 10px 25px;
+    border-radius: 10px;
+}
+
+.btn-primary {
+    background-color: black;
+}
+
+.event-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Space between blocks */
+}
+
+.event-block {
+    background-color: #f8f9fa; /* Light background color */
+    border: 1px solid #dee2e6; /* Border around each block */
+    border-radius: 5px; /* Rounded corners */
+    padding: 15px; /* Padding inside the block */
+    width: calc(33.333% - 20px); /* Three blocks per row with gap */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+    .event-block h3 {
+        margin-top: 0; /* Remove top margin for heading */
+    }
+
+.event-actions {
+    margin-top: 10px; /* Space above actions */
+}
+
+.venue-image {
+    max-width: 100%; /* Make the image responsive */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 5px; /* Optional: rounded corners */
+    margin-top: 10px; /* Space above the image */
+}

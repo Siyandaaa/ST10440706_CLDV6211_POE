@@ -1,0 +1,44 @@
+﻿@model EventEase.Models.BookingViewModel
+
+@{
+    ViewData["Title"] = "Booking";
+}
+<h1>Booking</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+
+<form asp-controller="Bookings" asp-action="Index" method="get">
+    <input type="text" name="searchString" placeholder="Search..." />
+
+    <select name="EventTypeId" >
+        <option value="">Select Event Type</option>
+    </select>
+
+    <label>Start Date</label>
+    <input type="date" name="startDate" />
+    <label>End Date</label>
+    <input type="date" name="endDate" />
+
+    <label>
+        <input type="checkbox" name="isAvailable" value="true" /> Available Venues
+    </label>
+    <button type="submit">Search</button>
+</form>
+
+<div class="event-container">
+    @foreach (var item in Model.Bookings!)
+    {
+        <div class="event-block">
+            <p> Booking Date: @Html.DisplayFor(modelItem => item.BookingDate)</p>
+            <p> Event Name: @Html.DisplayFor(modelItem => item.Event.EventName)</p>
+            <p> Venue Name: @Html.DisplayFor(modelItem => item.Venue.VenueName)</p>
+            <div class="event-actions">
+                <a asp-action="Edit" asp-route-id="@item.BookingId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.BookingId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.BookingId">Delete</a>
+            </div>
+        </div>
+    }
+</div>
